@@ -1,0 +1,46 @@
+{
+  "notes": [
+    {
+      "id": 2,
+      "title": "Second Note",
+      "category": "Work",
+      "details": "Web development is a vast field that encompasses the creation and maintenance of websites and web applications. It involves various aspects such as web design, coding, programming, and database management. The process of web development includes planning, designing, developing, testing, and deploying websites to make them functional and user-friendly."
+    },
+    {
+      "id": 3,
+      "title": "Third Note",
+      "category": "Shopping",
+      "details": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate, odio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae tempore, corrupti earum dignis."
+    },
+    {
+      "id": 4,
+      "title": "Third Note",
+      "category": "Shopping",
+      "details": "Moreover, web development is not limited to desktop computers but also extends to mobile devices. With the increasing use of smartphones and tablets, web developers need to ensure that websites are responsive and optimized for different screen sizes. This involves implementing responsive design techniques and utilizing mobile-friendly frameworks to provide a seamless user experience across various devices. In conclusion, web development is a multifaceted discipline that involves designing, coding, and maintaining websites and web applications. It is essential for businesses and organizations to have a strong online presence and reach their target audience effectively. Web developers utilize various programming languages, frameworks, and techniques to create functional and user-friendly websites that are accessible across different devices."
+    },
+    {
+      "id": 5,
+      "title": "Third Note",
+      "category": "Shopping",
+      "details": "Cybersecurity is a critical aspect of our digital world. It refers to the practice of protecting computer systems, networks, and data from unauthorized access, theft, or damage."
+    },
+    {
+      "title": "Web dev",
+      "details": "Moreover, web development is not limited to desktop computers but also extends to mobile devices. With the increasing use of smartphones and tablets, web developers need to ensure that websites are responsive and optimized for different screen sizes. This involves implementing responsive design techniques and utilizing mobile-friendly frameworks to provide a seamless user experience across various devices.",
+      "category": "Todo",
+      "id": 8
+    },
+    {
+      "title": "said",
+      "details": "In conclusion, web development is a multifaceted discipline that involves designing, coding, and maintaining websites and web applications. It is essential for businesses and organizations to have a strong online presence and reach their target audience effectively. Web developers utilize various programming languages, frameworks, and techniques to create functional and user-friendly websites that are accessible across different devices.",
+      "category": "Work",
+      "id": 11
+    },
+    {
+      "title": "de",
+      "details": "de",
+      "category": "Todo",
+      "id": 12
+    }
+  ]
+}
