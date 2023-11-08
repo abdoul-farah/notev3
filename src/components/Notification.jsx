@@ -25,7 +25,7 @@ function Notification({ message, text }) {
     <Box>
       <Snackbar
         anchorOrigin={{ vertical: "top", horizontal: "center" }}
-        open={message}
+        open={message ? true : false}
         autoHideDuration={2000}
         onClose={handleClose}
         TransitionComponent={TransitionDown}

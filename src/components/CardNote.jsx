@@ -12,7 +12,6 @@ import Typography from "@mui/material/Typography";
 import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 
-
 import ConfirmDialog from "./ConfirmDialog";
 
 import { useState } from "react";
@@ -49,15 +48,12 @@ function CardNote({ note }) {
   }
   return (
     <>
-      <Card
-        variant="outlined"
-        sx={{ borderColor: bColor, "&:hover": { bgcolor: "action.hover" } }}
-      >
+      <Card variant="outlined" sx={{ "&:hover": { bgcolor: "action.hover" } }}>
         <CardHeader
           sx={{ color: bColor }}
           action={
             <IconButton onClick={() => deletCardHandler(note.id)}>
-              <MoreVertIcon />
+              <DeleteOutlineOutlinedIcon />
             </IconButton>
           }
           title={note.title}
