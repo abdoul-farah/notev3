@@ -37,6 +37,7 @@ export default function ConfirmDialog(props) {
   return (
     <Box sx={{ position: "absolute", top: 0 }}>
       <Dialog
+        sx={{ marginTop: "-200px" }}
         fullWidth
         open={confirmDialog.isOpen}
         onClose={handleClose}
