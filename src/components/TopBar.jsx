@@ -99,6 +99,7 @@ function TopBar() {
                 <SearchIcon />
               </SearchIconWrapper>
               <StyledInputBase
+                name="Search"
                 placeholder="Search…"
                 inputProps={{ "aria-label": "search" }}
                 value={searchInput}

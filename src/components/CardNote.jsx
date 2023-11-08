@@ -21,14 +21,6 @@ function CardNote({ note }) {
 
   const deletCardHandler = async (id) => {
     setConfirmDialog({ isOpen: true });
-    // if (confirm(`Are you sure you want to delete "${note.title}" ?`)) {
-    //   const res = await fetch("https://notes-3r0s.onrender.com/notes/" + id, {
-    //     method: "DELETE",
-    //   });
-
-    //   navigate("/");
-    //   dispatch(update(""));
-    // }
   };
   let bColor;
   switch (note.category) {

@@ -6,12 +6,11 @@ import { createNote } from "../store/index";
 function ErrorCreate() {
   const error = useRouteError();
   const dispatch = useDispatch();
-  if (error.status === 500) {
-    console.log("error 500");
-    // dispatch(createNote());
-  } else {
+
+  if (!error) {
     dispatch(createNote());
   }
+
   return (
     <div>
       {error && error.data && (

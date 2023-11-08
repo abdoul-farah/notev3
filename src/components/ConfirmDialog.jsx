@@ -12,12 +12,12 @@ import { update, deleteNote, createNote } from "../store/index";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Notification from "./Notification";
+import { Box } from "@mui/material";
 
 export default function ConfirmDialog(props) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { confirmDialog, setConfirmDialog, id } = props;
-  console.log(id);
 
   const handleClose = () => {
     setConfirmDialog({ isOpen: false });
@@ -35,13 +35,13 @@ export default function ConfirmDialog(props) {
     navigate("/");
   };
   return (
-    <>
+    <Box sx={{ position: "absolute", top: 0 }}>
       <Dialog
+        fullWidth
         open={confirmDialog.isOpen}
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
-        sx={{ padding: "50px" }}
       >
         <DialogTitle id="alert-dialog-title">Confirm Note Delete</DialogTitle>
         <DialogContent>
@@ -63,6 +63,6 @@ export default function ConfirmDialog(props) {
           </Button>
         </DialogActions>
       </Dialog>
-    </>
+    </Box>
   );
 }

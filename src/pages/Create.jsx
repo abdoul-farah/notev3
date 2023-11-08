@@ -20,7 +20,7 @@ function Create() {
   const navigate = useNavigate();
   const submitHandler = async (e) => {
     e.preventDefault();
-    console.log(newNote);
+
     setIsLoading(true);
     const res = await fetch("https://notes-3r0s.onrender.com/notes", {
       method: "POST",
@@ -33,9 +33,10 @@ function Create() {
     navigate("/");
   };
   return (
-    <form onSubmit={submitHandler} id="form">
+    <form onSubmit={submitHandler} name="form">
       <Stack spacing={2} sx={{ maxWidth: "700px" }}>
         <TextField
+          name="Title"
           label="Title"
           fullWidth
           required
@@ -45,6 +46,7 @@ function Create() {
           }
         />
         <TextField
+          name="note"
           id="outlined-multiline-static"
           label="Note"
           multiline
@@ -66,13 +68,24 @@ function Create() {
           }
           required
         >
-          <FormControlLabel value="Todo" control={<Radio />} label="Todo" />
+          <FormControlLabel
+            value="Todo"
+            control={<Radio />}
+            label="Todo"
+            id="Todo"
+          />
           <FormControlLabel
             value="Shopping"
             control={<Radio />}
             label="Shopping"
+            id="Shopping"
           />
-          <FormControlLabel value="Work" control={<Radio />} label="Work" />
+          <FormControlLabel
+            value="Work"
+            control={<Radio />}
+            label="Work"
+            id="Work"
+          />
         </RadioGroup>
 
         <Button type="submit" variant="contained" sx={{ width: { sm: 200 } }}>
