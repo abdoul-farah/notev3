@@ -7,6 +7,10 @@
     {
       "src": "/create",
       "dest": "/"
+    },
+    {
+      "src": "/update",
+      "dest": "/"
     }
   ]
 }
