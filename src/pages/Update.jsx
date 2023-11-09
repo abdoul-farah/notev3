@@ -104,7 +104,7 @@ function Update() {
           </RadioGroup>
 
           <Button type="submit" variant="contained" sx={{ width: { sm: 200 } }}>
-            {isLoading ? "submitting" : "submit"}
+            {isLoading ? "Updating" : "Update"}
           </Button>
         </Stack>
       </form>
