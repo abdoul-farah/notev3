@@ -6,12 +6,11 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-import WarningIcon from "@mui/icons-material/Warning";
+
 import { useDispatch } from "react-redux";
-import { update, deleteNote, createNote } from "../store/index";
+import { deleteNote, createNote, updateNote } from "../store/index";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
-import Notification from "./Notification";
+
 import { Box } from "@mui/material";
 
 export default function ConfirmDialog(props) {
@@ -24,6 +23,7 @@ export default function ConfirmDialog(props) {
   };
 
   const deleteHandler = async (id) => {
+    // eslint-disable-next-line no-unused-vars
     const res = await fetch("https://notes-3r0s.onrender.com/notes/" + id, {
       method: "DELETE",
     });
@@ -32,6 +32,9 @@ export default function ConfirmDialog(props) {
 
     dispatch(deleteNote(true));
     dispatch(createNote(false));
+
+    dispatch(updateNote(false));
+
     navigate("/");
   };
   return (

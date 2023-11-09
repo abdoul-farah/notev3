@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
-import { useDispatch, useSelector } from "react-redux";
-import { createNote, deleteNote } from "../store/index";
+import { useDispatch } from "react-redux";
+import { createNote, deleteNote, updateNote } from "../store/index";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import Slide from "@mui/material/Slide";
@@ -19,6 +19,7 @@ function Notification({ message, text }) {
 
     dispatch(createNote(false));
     dispatch(deleteNote(false));
+    dispatch(updateNote(false));
   };
 
   return (

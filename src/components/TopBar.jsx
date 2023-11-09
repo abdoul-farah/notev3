@@ -62,55 +62,52 @@ function TopBar() {
 
   const inCreatePage = location.pathname === "/create";
   return (
-    <Box>
-      <AppBar position="fixed" sx={{ boxShadow: "none" }}>
-        <Toolbar
+    <AppBar position="sticky" sx={{ boxShadow: "none", marginBottom: "20px" }}>
+      <Toolbar
+        sx={{
+          display: "flex",
+          gap: "10px",
+          justifyContent: "space-between",
+          flexDirection: { xs: "column", sm: "row" },
+          paddingBlock: "10px",
+        }}
+      >
+        <Box
           sx={{
+            cursor: "pointer",
             display: "flex",
-            justifyContent: "space-between",
-            flexDirection: { xs: "column", sm: "row" },
-
-            paddingBlock: "10px",
+          }}
+          onClick={() => {
+            navigate("/");
+            dispatch(update(""));
           }}
         >
-          <Box
+          <Typography
+            variant="h6"
             sx={{
-              cursor: "pointer",
-              display: "flex",
-            }}
-            onClick={() => {
-              navigate("/");
-              dispatch(update(""));
+              marginRight: "20px",
             }}
           >
-            <Typography
-              variant="h6"
-              sx={{
-                marginRight: "20px",
-              }}
-            >
-              TakeNote
-            </Typography>
-          </Box>
+            TakeNote
+          </Typography>
+        </Box>
 
-          {!inCreatePage && (
-            <Search>
-              <SearchIconWrapper>
-                <SearchIcon />
-              </SearchIconWrapper>
-              <StyledInputBase
-                name="Search"
-                placeholder="Search…"
-                inputProps={{ "aria-label": "search" }}
-                value={searchInput}
-                onChange={(e) => dispatch(update(e.target.value))}
-              />
-            </Search>
-          )}
-        </Toolbar>
-      </AppBar>
-      <Toolbar />
-    </Box>
+        {!inCreatePage && (
+          <Search>
+            <SearchIconWrapper>
+              <SearchIcon />
+            </SearchIconWrapper>
+            <StyledInputBase
+              name="Search"
+              placeholder="Search…"
+              inputProps={{ "aria-label": "search" }}
+              value={searchInput}
+              onChange={(e) => dispatch(update(e.target.value))}
+            />
+          </Search>
+        )}
+      </Toolbar>
+    </AppBar>
   );
 }
 

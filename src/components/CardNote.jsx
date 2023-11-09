@@ -15,9 +15,16 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import ConfirmDialog from "./ConfirmDialog";
 
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { selectNote } from "../store/index";
+import { Navigate, useNavigate } from "react-router-dom";
 
 function CardNote({ note }) {
   const [confirmDialog, setConfirmDialog] = useState({ isOpen: false });
+
+  const dispatch = useDispatch();
+
+  const navigate = useNavigate();
 
   const deletCardHandler = async (id) => {
     setConfirmDialog({ isOpen: true });
@@ -51,7 +58,13 @@ function CardNote({ note }) {
           title={note.title}
           subheader={note.category}
         />
-        <CardContent>
+        <CardContent
+          onClick={() => {
+            console.log(note.id);
+            dispatch(selectNote(note));
+            navigate("/update");
+          }}
+        >
           <Typography variant="body2" color="textSecondary">
             {note.details}
           </Typography>

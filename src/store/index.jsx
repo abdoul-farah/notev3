@@ -4,6 +4,8 @@ const initialState = {
   searchInput: "",
   newNoteisCreated: false,
   noteIsDeleted: false,
+  noteIsUpdated: false,
+  selectedNote: { title: "", details: "", id: "" },
 };
 
 const searchSlice = createSlice({
@@ -19,10 +21,17 @@ const searchSlice = createSlice({
     deleteNote: (state, action) => {
       state.noteIsDeleted = action.payload;
     },
+    selectNote: (state, action) => {
+      state.selectedNote = action.payload;
+    },
+    updateNote: (state, action) => {
+      state.noteIsUpdated = action.payload;
+    },
   },
 });
 
-export const { update, createNote, deleteNote } = searchSlice.actions;
+export const { update, createNote, deleteNote, selectNote, updateNote } =
+  searchSlice.actions;
 
 export const store = configureStore({
   reducer: searchSlice.reducer,

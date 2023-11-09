@@ -21,6 +21,7 @@ import ErrorCreate from "./pages/ErrorCreate";
 
 import CssBaseline from "@mui/material/CssBaseline";
 import { loader as loaderNotes } from "./pages/Notes";
+import Update from "./pages/Update";
 // import { action as actionCreateNote } from "./pages/Create";
 
 const router = createBrowserRouter(
@@ -33,6 +34,7 @@ const router = createBrowserRouter(
         // action={actionCreateNote}
         // errorElement={<ErrorCreate />}
       />
+      <Route path="/update" element={<Update />} />
     </Route>
   )
 );

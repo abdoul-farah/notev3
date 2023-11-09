@@ -18,6 +18,7 @@ function Notes() {
   const searchInput = useSelector((state) => state.searchInput);
   const newNoteisCreated = useSelector((state) => state.newNoteisCreated);
   const noteIsDeleted = useSelector((state) => state.noteIsDeleted);
+  const noteIsUpdated = useSelector((state) => state.noteIsUpdated);
 
   const searchInputLength = searchInput.length;
 
@@ -44,6 +45,9 @@ function Notes() {
         />
       )}
       {noteIsDeleted && <Notification message="error" text="Note is deleted" />}
+      {noteIsUpdated && (
+        <Notification message="success" text="Note is updated" />
+      )}
 
       <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 900: 2, 1200: 3 }}>
         <Masonry gutter="10px">
@@ -53,7 +57,7 @@ function Notes() {
             foundedNotes.map((note) => <CardNote key={note.id} note={note} />)}
 
           {searchInputLength !== 0 && foundedNotes.length === 0 && (
-            <Box sx={{ textAlign: "center", marginTop: "200px" }}>
+            <Box sx={{ textAlign: "center", marginTop: "50px" }}>
               <Typography
                 variant="h4"
                 color="error"

@@ -6,9 +6,9 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 
 import { useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { createNote, deleteNote } from "../store/index";
+import { createNote, deleteNote, updateNote } from "../store/index";
 function Create() {
   const [newNote, setNewNote] = useState({
     title: "",
@@ -29,6 +29,7 @@ function Create() {
     });
     setIsLoading(false);
     dispatch(deleteNote(false));
+    dispatch(updateNote(false));
     dispatch(createNote(true));
     navigate("/");
   };
