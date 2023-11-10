@@ -60,7 +60,7 @@ function TopBar() {
   const searchInput = useSelector((state) => state.searchInput);
   const location = useLocation();
 
-  const inCreatePage = location.pathname === "/create";
+  const inHomePage = location.pathname === "/";
   return (
     <AppBar position="sticky" sx={{ boxShadow: "none", marginBottom: "20px" }}>
       <Toolbar
@@ -92,7 +92,7 @@ function TopBar() {
           </Typography>
         </Box>
 
-        {!inCreatePage && (
+        {inHomePage && (
           <Search>
             <SearchIconWrapper>
               <SearchIcon />

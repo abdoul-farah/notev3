@@ -11,6 +11,7 @@ import Typography from "@mui/material/Typography";
 
 import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import EditNoteIcon from "@mui/icons-material/EditNote";
 
 import ConfirmDialog from "./ConfirmDialog";
 
@@ -18,6 +19,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { selectNote } from "../store/index";
 import { Navigate, useNavigate } from "react-router-dom";
+import { CardActions } from "@mui/material";
 
 function CardNote({ note }) {
   const [confirmDialog, setConfirmDialog] = useState({ isOpen: false });
@@ -58,17 +60,22 @@ function CardNote({ note }) {
           title={note.title}
           subheader={note.category}
         />
-        <CardContent
-          onClick={() => {
-            console.log(note.id);
-            dispatch(selectNote(note));
-            navigate("/update");
-          }}
-        >
+        <CardContent>
           <Typography variant="body2" color="textSecondary">
             {note.details}
           </Typography>
         </CardContent>
+        <CardActions disableSpacing>
+          <IconButton
+            onClick={() => {
+              // console.log(note.id);
+              dispatch(selectNote(note));
+              navigate("/update");
+            }}
+          >
+            <EditNoteIcon />
+          </IconButton>
+        </CardActions>
       </Card>
       <ConfirmDialog
         confirmDialog={confirmDialog}
