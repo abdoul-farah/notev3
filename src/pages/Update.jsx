@@ -31,7 +31,7 @@ function Update() {
 
     setIsLoading(true);
     const res = await fetch(
-      "https://notes-3r0s.onrender.com/notes/" + selectedNote.id,
+      "https://vercel-api-ruddy.vercel.app/notes/" + selectedNote.id,
       {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },

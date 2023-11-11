@@ -26,7 +26,7 @@ function Notes() {
   useEffect(() => {
     const fetchNotes = async (item) => {
       const res = await fetch(
-        "https://notes-3r0s.onrender.com/notes?&q=" + item
+        "https://vercel-api-ruddy.vercel.app/notes?&q=" + item
       );
 
       const data = await res.json();
@@ -83,7 +83,7 @@ export default Notes;
 
 export async function loader() {
   const res = await fetch(
-    "https://notes-3r0s.onrender.com/notes?_sort=id&_order=desc"
+    "https://vercel-api-ruddy.vercel.app/notes?_sort=id&_order=desc"
   );
   const notes = await res.json();
   return notes;

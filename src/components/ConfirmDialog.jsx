@@ -24,7 +24,7 @@ export default function ConfirmDialog(props) {
 
   const deleteHandler = async (id) => {
     // eslint-disable-next-line no-unused-vars
-    const res = await fetch("https://notes-3r0s.onrender.com/notes/" + id, {
+    const res = await fetch("https://vercel-api-ruddy.vercel.app/notes/" + id, {
       method: "DELETE",
     });
 

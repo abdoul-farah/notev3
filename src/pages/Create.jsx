@@ -22,7 +22,7 @@ function Create() {
     e.preventDefault();
 
     setIsLoading(true);
-    const res = await fetch("https://notes-3r0s.onrender.com/notes", {
+    const res = await fetch("https://vercel-api-ruddy.vercel.app/notes", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newNote),
