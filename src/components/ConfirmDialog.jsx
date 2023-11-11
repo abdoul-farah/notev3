@@ -50,7 +50,7 @@ export default function ConfirmDialog(props) {
         <DialogTitle id="alert-dialog-title">Confirm Note Delete</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            {` Are you sure you want to delete this note '${title}' ?`}
+            {` Are you sure you want to delete this note "${title}" ?`}
           </DialogContentText>
         </DialogContent>
         <DialogActions>
