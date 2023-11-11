@@ -81,6 +81,7 @@ function CardNote({ note }) {
         confirmDialog={confirmDialog}
         setConfirmDialog={setConfirmDialog}
         id={note.id}
+        title={note.title}
       />
     </>
   );
