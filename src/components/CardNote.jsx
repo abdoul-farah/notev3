@@ -49,7 +49,13 @@ function CardNote({ note }) {
   }
   return (
     <>
-      <Card variant="outlined" sx={{ "&:hover": { bgcolor: "action.hover" } }}>
+      <Card
+        variant="outlined"
+        sx={{
+          "&:hover": { bgcolor: "action.hover" },
+          "*::selection": { bgcolor: "primary.light", color: "white" },
+        }}
+      >
         <CardHeader
           sx={{ color: bColor }}
           action={

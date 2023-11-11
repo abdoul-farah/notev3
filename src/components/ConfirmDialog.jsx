@@ -54,7 +54,7 @@ export default function ConfirmDialog(props) {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button variant="outlined" onClick={handleClose}>
+          <Button variant="contained" onClick={handleClose}>
             Cancel
           </Button>
           <Button

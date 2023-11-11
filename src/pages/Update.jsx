@@ -65,7 +65,7 @@ function Update() {
             id="outlined-multiline-static"
             label="Note"
             multiline
-            rows={5}
+            rows={8}
             fullWidth
             required
             defaultValue={selectedNote.details}

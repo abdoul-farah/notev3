@@ -51,7 +51,7 @@ function Create() {
           id="outlined-multiline-static"
           label="Note"
           multiline
-          rows={5}
+          rows={8}
           fullWidth
           required
           value={newNote.details}
