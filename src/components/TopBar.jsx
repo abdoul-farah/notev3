@@ -88,7 +88,7 @@ function TopBar() {
               marginRight: "20px",
             }}
           >
-            TakeNote
+            Notes
           </Typography>
         </Box>
 
